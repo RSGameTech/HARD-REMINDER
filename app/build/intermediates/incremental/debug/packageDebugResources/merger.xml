@@ -8,12 +8,16 @@
         <item name="colorSurface">@color/surface</item>
         <item name="colorOnSurface">@color/text_primary</item>
         <item name="android:colorBackground">@color/background</item>
-        <item name="android:statusBarColor">@color/primary_dark</item>
-        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowBackground">@color/background</item>
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.HardReminder.SmallComponent</item>
         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.HardReminder.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.HardReminder.LargeComponent</item>
+        
+        <item name="materialCalendarStyle">@style/Widget.HardReminder.MaterialCalendar</item>
+        <item name="materialTimePickerStyle">@style/Widget.HardReminder.TimePicker</item>
     </style><style name="Theme.HardReminder.Dark" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/dark_background</item>
@@ -23,12 +27,13 @@
         <item name="colorSurface">@color/dark_surface</item>
         <item name="colorOnSurface">@color/dark_text_primary</item>
         <item name="android:colorBackground">@color/dark_background</item>
-        <item name="android:statusBarColor">@color/dark_background</item>
-        <item name="android:navigationBarColor">@color/dark_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowBackground">@color/dark_background</item>
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.HardReminder.SmallComponent</item>
         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.HardReminder.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.HardReminder.LargeComponent</item>
     </style><style name="Theme.HardReminder.Amoled" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/amoled_background</item>
@@ -38,18 +43,13 @@
         <item name="colorSurface">@color/amoled_surface</item>
         <item name="colorOnSurface">@color/amoled_text_primary</item>
         <item name="android:colorBackground">@color/amoled_background</item>
-        <item name="android:statusBarColor">@color/amoled_background</item>
-        <item name="android:navigationBarColor">@color/amoled_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowBackground">@color/amoled_background</item>
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.HardReminder.SmallComponent</item>
         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.HardReminder.MediumComponent</item>
-    </style><style name="Theme.HardReminder.Alarm" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/primary</item>
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:statusBarColor">@color/primary_dark</item>
-        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.HardReminder.LargeComponent</item>
     </style><style name="WindowAnimationTransition">
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
@@ -58,19 +58,25 @@
         <item name="cornerSize">12dp</item>
     </style><style name="ShapeAppearance.HardReminder.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">16dp</item>
+        <item name="cornerSize">20dp</item>
     </style><style name="Widget.HardReminder.Toolbar" parent="Widget.Material3.Toolbar">
-        <item name="android:background">?attr/colorPrimary</item>
-        <item name="titleTextColor">@color/text_on_primary</item>
-        <item name="navigationIconTint">@color/text_on_primary</item>
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="titleTextColor">?attr/colorOnSurface</item>
     </style><style name="TextAppearance.HardReminder.SectionHeader" parent="TextAppearance.Material3.LabelSmall">
         <item name="android:textSize">12sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">?attr/colorPrimary</item>
         <item name="android:letterSpacing">0.08</item>
     </style><style name="Widget.HardReminder.ExposedDropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-        <item name="boxCornerRadiusTopStart">12dp</item>
-        <item name="boxCornerRadiusTopEnd">12dp</item>
-        <item name="boxCornerRadiusBottomStart">12dp</item>
-        <item name="boxCornerRadiusBottomEnd">12dp</item>
-    </style></file><file path="C:\Users\ritam\Desktop\HARD-REMINDER\app\src\main\res\values-night\colors.xml" qualifiers="night-v8"><color name="primary">#EF5350</color><color name="primary_dark">#1A1A1A</color><color name="primary_light">#FF867C</color><color name="accent">#FFB74D</color><color name="background">#121212</color><color name="surface">#1E1E1E</color><color name="text_primary">#FFFFFFDE</color><color name="text_secondary">#FFFFFF99</color><color name="text_on_primary">#FFFFFF</color><color name="text_on_primary_muted">#CCFFFFFF</color><color name="past_reminder">#616161</color><color name="status_ok">#66BB6A</color><color name="status_error">#EF5350</color><color name="divider">#2C2C2C</color><color name="section_bg">#1A1A1A</color><color name="ripple_primary">#33EF5350</color><color name="card_stroke">#2C2C2C</color></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\ritam\Desktop\HARD-REMINDER\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\ritam\Desktop\HARD-REMINDER\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\ritam\Desktop\HARD-REMINDER\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\ritam\Desktop\HARD-REMINDER\app\build\generated\res\resValues\debug"/></dataSet><mergedItems/></merger>
+        <item name="boxCornerRadiusTopStart">20dp</item>
+        <item name="boxCornerRadiusTopEnd">20dp</item>
+        <item name="boxCornerRadiusBottomStart">20dp</item>
+        <item name="boxCornerRadiusBottomEnd">20dp</item>
+    </style><style name="Widget.HardReminder.TimePicker" parent="Widget.Material3.MaterialTimePicker">
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.HardReminder.MediumComponent</item>
+    </style><style name="Widget.HardReminder.MaterialCalendar" parent="Widget.Material3.MaterialCalendar">
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.HardReminder.MediumComponent</item>
+    </style><style name="ShapeAppearance.HardReminder.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">28dp</item>
+    </style></file><file path="C:\Users\ritam\Desktop\HARD-REMINDER\app\src\main\res\values-night\colors.xml" qualifiers="night-v8"><color name="primary">#EF5350</color><color name="primary_dark">#1A1A1A</color><color name="primary_light">#FF867C</color><color name="accent">#FFB74D</color><color name="background">#121212</color><color name="surface">#1E1E1E</color><color name="text_primary">#FFFFFFDE</color><color name="text_secondary">#FFFFFF99</color><color name="text_on_primary">#FFFFFF</color><color name="text_on_primary_muted">#CCFFFFFF</color><color name="past_reminder">#616161</color><color name="status_ok">#66BB6A</color><color name="status_error">#EF5350</color><color name="divider">#2C2C2C</color><color name="section_bg">#1A1A1A</color><color name="ripple_primary">#33EF5350</color><color name="card_stroke">#2C2C2C</color></file><file name="slide_in_left" path="C:\Users\ritam\Desktop\HARD-REMINDER\app\src\main\res\anim\slide_in_left.xml" qualifiers="" type="anim"/><file name="slide_in_right" path="C:\Users\ritam\Desktop\HARD-REMINDER\app\src\main\res\anim\slide_in_right.xml" qualifiers="" type="anim"/><file name="slide_out_left" path="C:\Users\ritam\Desktop\HARD-REMINDER\app\src\main\res\anim\slide_out_left.xml" qualifiers="" type="anim"/><file name="slide_out_right" path="C:\Users\ritam\Desktop\HARD-REMINDER\app\src\main\res\anim\slide_out_right.xml" qualifiers="" type="anim"/></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\ritam\Desktop\HARD-REMINDER\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\ritam\Desktop\HARD-REMINDER\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\ritam\Desktop\HARD-REMINDER\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\ritam\Desktop\HARD-REMINDER\app\build\generated\res\resValues\debug"/></dataSet><mergedItems/></merger>

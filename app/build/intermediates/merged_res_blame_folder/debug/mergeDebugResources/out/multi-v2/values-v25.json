@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.hardreminder.app-mergeDebugResources-61:/values-v25/values-v25.xml",
+            "outputFile": "com.hardreminder.app-mergeDebugResources-68:/values-v25/values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ritam\\.gradle\\caches\\8.13\\transforms\\f3ece12bda7efb98f9b325ce298868d1\\transformed\\appcompat-1.6.1\\res\\values-v25\\values-v25.xml",
+                    "source": "C:\\Users\\ritam\\.gradle\\caches\\9.3.1\\transforms\\38c17fd4426a253605a63f8af9603b3d\\workspace\\transformed\\appcompat-1.6.1\\res\\values-v25\\values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

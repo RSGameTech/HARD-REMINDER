@@ -19,6 +19,7 @@ object AppSettings {
     private const val KEY_DISMISS_ON_UNLOCK = "dismiss_on_unlock"
     private const val KEY_THEME_MODE = "theme_mode"
     private const val KEY_USE_AMOLED_MODE = "use_amoled_mode"
+    private const val KEY_USE_MATERIAL_YOU = "use_material_you"
 
     // Theme modes
     const val THEME_LIGHT = 0
@@ -82,6 +83,19 @@ object AppSettings {
     var Context.useAmoledMode: Boolean
         get() = prefs(this).getBoolean(KEY_USE_AMOLED_MODE, false)
         set(value) = prefs(this).edit().putBoolean(KEY_USE_AMOLED_MODE, value).apply()
+
+    // Use Material You dynamic colors
+    var Context.useMaterialYou: Boolean
+        get() = prefs(this).getBoolean(KEY_USE_MATERIAL_YOU, true)
+        set(value) = prefs(this).edit().putBoolean(KEY_USE_MATERIAL_YOU, value).apply()
+
+    // Helper for composing UI based on theme mode
+    val Context.isDarkAppTheme: Boolean
+        get() = when (themeMode) {
+            THEME_LIGHT -> false
+            THEME_DARK -> true
+            else -> resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK == android.content.res.Configuration.UI_MODE_NIGHT_YES
+        }
 
     val THEME_OPTIONS = listOf(
         THEME_LIGHT to "Light",
